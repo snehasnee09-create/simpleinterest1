@@ -1,8 +1,11 @@
-principal = float(input("Enter principal amount: "))
-rate = float(input("Enter rate of interest: "))
-time = float(input("Enter time in years: "))
+import sys
 
-# Formula: SI = (P * R * T) / 100
-simple_interest = (principal * rate * time) / 100
+def simple_interest(principal, interest, time):
+    return (principal * interest * time) / 100
 
-print(f"Simple Interest is: {simple_interest}")
+if _name_ == "_main_":
+    p = int(sys.argv[1])
+    i = float(sys.argv[2])
+    t = int(sys.argv[3])
+
+    print("Simple interest is:", simple_interest(p, i, t))
